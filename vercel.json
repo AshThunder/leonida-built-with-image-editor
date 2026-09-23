@@ -1,0 +1,12 @@
+{
+  "buildCommand": "node scripts/build-site.mjs",
+  "outputDirectory": "site-dist",
+  "installCommand": "npm install",
+  "framework": null,
+  "rewrites": [
+    { "source": "/stories", "destination": "/stories/index.html" },
+    { "source": "/stories/(.*)", "destination": "/stories/index.html" },
+    { "source": "/hijack", "destination": "/hijack/index.html" },
+    { "source": "/hijack/(.*)", "destination": "/hijack/index.html" }
+  ]
+}

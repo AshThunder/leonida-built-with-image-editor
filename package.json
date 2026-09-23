@@ -1,0 +1,24 @@
+{
+  "name": "unlayer-challenge",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev:site": "npm run dev -w site",
+    "dev:stories": "npm run dev -w leonida-stories",
+    "dev:billboard": "npm run dev -w billboard-hijack",
+    "build:stories": "npm run build -w leonida-stories",
+    "build:billboard": "npm run build -w billboard-hijack",
+    "build": "npm run build -w site && npm run build -w leonida-stories && npm run build -w billboard-hijack",
+    "build:site": "node scripts/build-site.mjs",
+    "demo:voice": "node demo/tts.mjs",
+    "demo:record": "node demo/record.mjs",
+    "demo:build": "node demo/build.mjs",
+    "demo": "npm run demo:voice && npm run demo:record && npm run demo:build"
+  },
+  "devDependencies": {
+    "playwright-core": "1.58"
+  }
+}

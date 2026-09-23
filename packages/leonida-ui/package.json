@@ -1,0 +1,22 @@
+{
+  "name": "@leonida/ui",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts",
+    "./theme.css": "./src/theme.css",
+    "./fonts": "./src/fonts.ts"
+  },
+  "peerDependencies": {
+    "@unlayer/react-image-editor": "^1.0.2",
+    "react": "^19.0.0"
+  },
+  "dependencies": {
+    "@fontsource-variable/geist": "^5.3.0",
+    "@fontsource-variable/geist-mono": "^5.3.0",
+    "@fontsource/barlow-condensed": "^5.3.0",
+    "@phosphor-icons/react": "^2.1.10",
+    "motion": "^13.4.1"
+  }
+}

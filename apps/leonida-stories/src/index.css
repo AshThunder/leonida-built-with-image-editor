@@ -1,0 +1,29 @@
+@import "tailwindcss";
+@import "../../../packages/leonida-ui/src/theme.css";
+@source "../../../packages/leonida-ui/src";
+
+@theme {
+  --color-accent: #ff5c93;
+}
+
+@keyframes story-progress {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
+.story-progress {
+  transform-origin: left center;
+  animation: story-progress var(--story-duration, 5s) linear forwards;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  /* Keep auto-advance timing intact; the bar simply is not animated smoothly. */
+  .story-progress {
+    animation-duration: var(--story-duration, 5s) !important;
+    animation-timing-function: steps(1, end) !important;
+  }
+}

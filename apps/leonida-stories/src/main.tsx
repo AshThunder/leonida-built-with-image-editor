@@ -1,0 +1,14 @@
+import { StrictMode } from 'react'
+import { createRoot } from 'react-dom/client'
+import { MotionConfig } from 'motion/react'
+import '@leonida/ui/fonts'
+import './index.css'
+import App from './App.tsx'
+
+createRoot(document.getElementById('root')!).render(
+  <StrictMode>
+    <MotionConfig reducedMotion="user">
+      <App />
+    </MotionConfig>
+  </StrictMode>,
+)

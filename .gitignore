@@ -1,0 +1,35 @@
+node_modules
+dist
+.DS_Store
+*.local
+.env
+.env.*
+*.log
+.vite
+
+**/node_modules
+**/dist
+site-dist
+.vercel
+.env*
+
+# Demo video pipeline (local only)
+demo/
+
+# Demo video pipeline output and media
+demo/out/
+*.mp4
+*.mov
+*.webm
+*.mkv
+*.wav
+*.mp3
+__pycache__/
+.venv/
+
+# Local working files, not part of the submission
+refs/
+SPECS.md
+RESOURCES.md
+/assets/
+.disc*.png

@@ -1,0 +1,30 @@
+@import "tailwindcss";
+@import "../../../packages/leonida-ui/src/theme.css";
+@source "../../../packages/leonida-ui/src";
+
+@theme {
+  --color-accent: #ff9a3d;
+}
+
+/* Plays once when saved art first lands on the board. */
+.signal-flash {
+  animation: signal-flash 0.55s steps(2) both;
+}
+
+@keyframes signal-flash {
+  0% {
+    filter: none;
+  }
+  25% {
+    filter: brightness(1.6) contrast(1.3);
+    transform: translateX(2px);
+  }
+  50% {
+    filter: saturate(1.8);
+    transform: translateX(-2px);
+  }
+  100% {
+    filter: none;
+    transform: none;
+  }
+}
